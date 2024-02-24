@@ -1,0 +1,136 @@
+<!-- <nav class="navbar">
+  <button class="btn">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav> -->
+
+<div class="header" [ngClass]="getHeadClass()">
+  <div class="header-content">
+    <div class="header-content-left">
+      <div class="search-container">
+        <div *ngIf="!canShowSearchAsOverlay" class="normal-search" [ngClass]="search_visible()">
+          <input type="search" class="search" name="" id="" placeholder="Search...">
+          <i class="far fa-search search-icon"></i>
+        </div>
+        <div *ngIf="canShowSearchAsOverlay">
+          <button [cdkMenuTriggerFor]="searchOverlay" class="search-menu-btn ripple" [ngClass]="search_hidden()">
+            <i class="far fa-search search-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header-content-center">
+      <a class="logo  mx-3 bg-white" href="#" [ngClass]="getLogoClass()" [ngClass]="logo_visible_content()">
+        <img src="https://corzent.com/images/corzent-new-long-p-500.png" height="30" alt="" loading="lazy"
+          class="logo-image" />
+      </a>
+    </div>
+      <div class="header-content-right">
+        <div class="header-menu">
+          <div class="header-menu-item">
+            <button class="header-menu-item-btn ripple" [cdkMenuTriggerFor]="notificationOverLay">
+              <i class="far fa-bell menu-icon"></i>
+            </button>
+          </div>
+          <div class="header-menu-item">
+            <button class="header-menu-item-btn ripple" (click)="overlayOpenResult()"
+              [cdkMenuTriggerFor]="logOutOverlay">
+              <i class="fas menu-icon fa-door-open"></i>
+            </button>
+          </div>
+          <div class="header-user-avatar-container">
+            <div class="header-user-avatar">
+              <img src="../../assets/Laptop.png" alt="user" class="user-avatar" [cdkMenuTriggerFor]="userOverlay">
+              <div class="circle-indicator pulse"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #searchOverlay>
+        <div class="overlay overlay-search overlay-fall">
+          <input type="search" class="search" name="" id="" placeholder="Search...">
+          <button class="search-btn">
+            <i class="far fa-search search-icon"></i>
+          </button>
+        </div>
+      </ng-template>
+
+      <ng-template #notificationOverLay>
+        <div class="overlay overlay-notification overlay-fall" cdkMenu>
+          <ul>
+            <li class="notification-head-container">
+              <div class="notification-head">Notifications</div>
+              <span class="view-all-link">
+                <a routerLink="notifications" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">View
+                  All</a>
+              </span>
+            </li>
+            <li class="notification-message-container" *ngFor="let notification of notifications" cdkMenuItem>
+              <i [class]="notification.icon"></i>
+              <div>
+                <div class="notification-subject">
+                  {{notification.subject}}
+                </div>
+                <p class="notification-desc">
+                  {{notification.description}}
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </ng-template>
+
+      <ng-template #userOverlay>
+        <div class=" overlay overlay-user overlay-side-appear" cdkMenu>
+          <div class="sideProfile-content">
+            <div class="sideProfile-up-content" *ngFor="let userDetail of userDetails">
+              <div class="sideR-up-head common-block-css">
+                Hi {{userDetail.fName}}!
+              </div>
+              <div class="common-block-css">
+                <div class="sideR-up-dp">
+                  <div class="sideR-up-dp-content">
+                    <img class="sideR-up-dp-userDp" src="../../assets/Laptop.png" alt="User Profile Picture is here...">
+                  </div>
+                </div>
+                <div class="sideR-up-info">
+                  <div class="userName">{{userDetail.fName}} {{userDetail.lName}}</div>
+                  <div class="userOtherInfo">
+                    <div class="userPosition common-content-css">{{userDetail.position}}</div>
+                    <div class="userID common-content-css">ID: {{userDetail.userID}}</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="sideProfile-down-content">
+              <div class="sideR-down-head"></div>
+              <div class="sideR-down-calender"></div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template #logOutOverlay>
+        <mat-menu class="overlay centered-overlay overlay-logOut" [ngClass]="overlayCloseFunction()">
+          <div class="overlay-logOut-content">
+            <div class="overlay-logOut-ask"> Do you want to logout ?</div>
+            <div class="overlay-logOut-buttons">
+              <div class="overlay-logOut-OKbutton">
+                <button class="logOut-ok">
+                  <i class="logOut-ok-icon fas fa-sign-out-alt"></i>
+                  OK
+                </button>
+              </div>
+              <div class="overlay-logOut-CancelButton">
+                <button class="logOut-cancel" (click)="overlayCloseResult()" [disabled]="">
+                  <i class="logOut-cancel-icon far fa-times-circle"></i>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-menu>
+      </ng-template>
+    </div>

@@ -1,0 +1,110 @@
+
+@import "../app.component.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content !important;
+  padding: 1rem 1rem;
+  background-color: white;
+  border: 1px solid #EAECEE;
+  border-radius: 10px;
+
+  .card-body {
+    margin-top: 0.125rem;
+    padding: 0.313rem 0.375rem;
+    width: 12rem;
+
+    .card-title {
+      font-size: 0.925rem;
+      line-height: 1.25;
+      margin: 0.575rem 0;
+      cursor: pointer;
+    }
+  }
+
+  /* Style for the card image */
+  .card-img-top {
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    font-size: 36px;
+    width: 10.95rem;
+    height: auto;
+    cursor: pointer;
+    transition: 0.275s all ease-in-out;
+  }
+
+  .card-img-top:hover {
+    transform: scale(1.08);
+  }
+
+  .card-menu {
+    align-self: flex-end;
+    font-size: 18px;
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-left: 5px;
+    outline: 0;
+    color: #495057;
+    transition: 275ms all ease-in-out;
+  }
+
+  .card-menu:hover {
+    transform: scale(1.2);
+    animation: btnHover 200ms ease-in-out;
+    
+    .fa-ellipsis-v {
+      color: #699dfa;
+    }
+  }
+
+  .card-menu:active {
+    animation: btnPress 200ms ease-in-out;
+  }
+  
+
+}
+
+div {
+  font-size: 0.825rem;
+  margin: 0.175rem 0 0;
+}
+
+.overlay-fall {
+    animation: fall 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes fall {
+  0% {
+      transform: scaleY(0);
+      opacity: 0;
+  }
+  100% {
+      transform: scaleY(1);
+      opacity: 1;
+  }
+}
+
+// @keyframes btnPress {
+//   0% {
+//     transform: scale(1);
+//   }
+
+//   100% {
+//     transform: scale(0.7);
+//   }
+// }
+
+// @keyframes btnRelease {
+//   0% {
+//     transform: scale(0.7);
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
+// }

@@ -1,0 +1,51 @@
+// @import "theme.scss";
+
+// .main-wrapper {
+//   // flex-direction: column;
+//   justify-content: space-between;
+//   align-items: stretch;
+//   display: flex;
+//   width: 100%;
+//   background-color: $bg-white;
+// }
+
+
+// .main {
+//   display: flex;
+//   flex-direction: column;
+//   align-self: flex-end;
+//   min-height: 100vh;
+//   min-width: 0;
+//   overflow: hidden;
+//   width: calc(100% - 15.15rem);
+//   min-width: calc(100% - 240px);
+// }
+
+@keyframes btnPress {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes btnRelease {
+    0% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes btnHover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
