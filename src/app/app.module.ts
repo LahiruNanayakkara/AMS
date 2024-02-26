@@ -26,6 +26,8 @@ import { AssetsComponent } from './assets/assets.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { AssetCardComponent } from './asset-card/asset-card.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AssetListComponent } from './Employee/Asset-List/asset-list/asset-list.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     HeaderComponent,
     AssetsComponent,
     EmployeesComponent,
-    AssetCardComponent
+    AssetCardComponent,
+    AssetListComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     AppRoutingModule,
     FontAwesomeModule,
     OverlayModule,
-    CdkMenuModule
+    CdkMenuModule,
+    NgxPaginationModule
   ],
   providers: [
     provideClientHydration(),
