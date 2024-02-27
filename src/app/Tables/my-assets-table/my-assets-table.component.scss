@@ -1,0 +1,23 @@
+@import "../../theme.scss";
+
+.row {
+  flex-wrap: nowrap;
+}
+
+.card{
+  background-color: transparent ;
+}
+
+.card {
+  border: none;
+}
+
+.card-header {
+  background-color: transparent ;
+  border: none;
+}
+
+card-footer{
+  background-color: transparent !important ;
+  border: 1;
+}

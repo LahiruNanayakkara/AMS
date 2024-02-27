@@ -1,110 +1,93 @@
 
-@import "../app.component.scss";
 
 .card {
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content !important;
-  padding: 1rem 1rem;
+  width: 26rem;
+  min-width: fit-content;
+  padding: 0.5rem 0.313rem;
   background-color: white;
   border: 1px solid #EAECEE;
   border-radius: 10px;
+  color:rgb(48, 48, 48);
+}
 
-  .card-body {
-    margin-top: 0.125rem;
-    padding: 0.313rem 0.375rem;
-    width: 12rem;
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
 
-    .card-title {
-      font-size: 0.925rem;
-      line-height: 1.25;
-      margin: 0.575rem 0;
-      cursor: pointer;
-    }
+.info-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-title {
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  width: 8rem;
+  min-width: 120px;
+}
+
+.info-header i {
+  font-size: 2.25em;
+}
+
+.options {
+  display: flex;
+}
+
+.options i {
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.3rem;
+  margin-left: 0.75rem;
+}
+
+.info-detail-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.info-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-body {
+  width: inherit;
+}
+
+.info-details {
+
+  div{
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+    font-size: 0.825rem;
+    color: black;
   }
 
-  /* Style for the card image */
-  .card-img-top {
-    box-sizing: border-box;
-    padding: 0 1.5rem;
-    font-size: 36px;
-    width: 10.95rem;
-    height: auto;
-    cursor: pointer;
-    transition: 0.275s all ease-in-out;
+  span {
+    font-size: 2.5rem;
+    line-height: 1;
   }
-
-  .card-img-top:hover {
-    transform: scale(1.08);
-  }
-
-  .card-menu {
-    align-self: flex-end;
-    font-size: 18px;
-    height: 42px;
-    width: 42px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    margin-left: 5px;
-    outline: 0;
-    color: #495057;
-    transition: 275ms all ease-in-out;
-  }
-
-  .card-menu:hover {
-    transform: scale(1.2);
-    animation: btnHover 200ms ease-in-out;
-    
-    .fa-ellipsis-v {
-      color: #699dfa;
-    }
-  }
-
-  .card-menu:active {
-    animation: btnPress 200ms ease-in-out;
-  }
-  
 
 }
 
-div {
-  font-size: 0.825rem;
-  margin: 0.175rem 0 0;
+.info-details:last-child {
+  // align-self: center;
 }
 
-.overlay-fall {
-    animation: fall 300ms ease-in-out forwards;
-    transform-origin: top center;
+.btn {
+  font-size: 0.875rem;
+  color: black;
+  border: none;
 }
-
-@keyframes fall {
-  0% {
-      transform: scaleY(0);
-      opacity: 0;
-  }
-  100% {
-      transform: scaleY(1);
-      opacity: 1;
-  }
-}
-
-// @keyframes btnPress {
-//   0% {
-//     transform: scale(1);
-//   }
-
-//   100% {
-//     transform: scale(0.7);
-//   }
-// }
-
-// @keyframes btnRelease {
-//   0% {
-//     transform: scale(0.7);
-//   }
-//   100% {
-//     transform: scale(1);
-//   }
-// }

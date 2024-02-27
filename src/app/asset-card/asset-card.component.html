@@ -1,25 +1,37 @@
-<div class="assets-card">
-  <div class="card" style="width: 16rem;">
-    <button type="button" class="card-menu ripple" [cdkMenuTriggerFor]="assetCardOverlay">
-      <i class="fas fa-ellipsis-v"></i>
-    </button>
-    <img src="../../../../assets/Laptop2.png" class="card-img-top card-img" alt="...">
+<h1>Assets</h1>
+<div class="card">
+    <div class="card-head">Lorem ipsum - Assets</div>
     <div class="card-body">
-      <h5 class="card-title">13-inch MacBook Air with M1 chip</h5>
-      <div class="card-text">ID : 4718050302178</div>
-      <div class="card-text">Model: Apple MacBook Air</div>
-      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-    </div>
-  </div>
-  <ng-template #assetCardOverlay>
-    <div class="card overlay-fall" cdkMenu>
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </ng-template>
-</div>
+        <div class="info-header">
+            <div class="info-header-content">
+                <i class="fas fa-file-invoice"></i>
+                <h4 class="card-title">
+                    Assets Information
+                </h4>
+            </div>
+            <div class="options">
+                <i class="fa-regular fa-bell"></i>
+                <i class="fa fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+        <div class="info-detail-wrapper">
+            <div class="info-details">
+                <div>New Assets</div>
+                <span>250</span>
+            </div>
+            <div class="info-details">
+                <div>Old Assets</div>
+                <span>250</span>
+            </div>
+            <div class="info-details">
+                <button class="btn">
+                    Manage Info
+                    <i class="fa fa-angle-right"></i>
+                </button>
 
+            </div>
+        </div>
+
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+</div>

@@ -28,6 +28,7 @@ import { AssetCardComponent } from './asset-card/asset-card.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AssetListComponent } from './Employee/Asset-List/asset-list/asset-list.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MyAssetsTableComponent } from './Tables/my-assets-table/my-assets-table.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AssetsComponent,
     EmployeesComponent,
     AssetCardComponent,
-    AssetListComponent
+    AssetListComponent,
+    MyAssetsTableComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Asset } from '../../../Models/asset';
+import { Asset } from '../Models/asset';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AssetListServiceService {
+export class AssetsService {
 
   constructor() { }
-
 
   public assetList:Asset[] = [
     {

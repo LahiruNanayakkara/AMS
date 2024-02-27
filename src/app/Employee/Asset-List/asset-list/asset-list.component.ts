@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Asset } from '../../../asset';
-import { AssetListServiceService } from './asset-list-service.service';
+import { Asset } from '../../../Models/asset';
+import { AssetsService } from '../../../Services/assets.service';
 
 @Component({
   selector: 'app-asset-list',
@@ -13,7 +13,7 @@ export class AssetListComponent {
   totalLength:any;
   page:number=1;
 
-  constructor( private service:AssetListServiceService) {
+  constructor( private service:AssetsService) {
   }
 
   ngOnInit() {
@@ -21,7 +21,7 @@ export class AssetListComponent {
     console.log(this.assetList);
   }
 
-  getAssets(service:AssetListServiceService): Asset[] {
+  getAssets(service:AssetsService): Asset[] {
     return service.assetList
   }
 

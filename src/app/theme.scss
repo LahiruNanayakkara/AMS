@@ -7,3 +7,38 @@ $text-white: white;
 $primary:#1366D9;
 $secondary:#5D6679;
 $font-secondary:#4F5B67;
+
+// for buttons
+.action-btns {
+  display: flex;
+  width: fit-content;
+  padding: 0;
+}
+
+.btn {
+  border-radius: 0.25em;
+  // font-size: 1em;
+  margin-left: 0.5em;
+}
+
+.btn.btn-primary
+{
+  background-color: $primary;
+}
+
+.btn.btn-primary:active {
+  background-color: black;
+}
+
+.btn.btn-secondary {
+  background-color: transparent;
+  color: $font-secondary;
+  border-color: $secondary;
+}
+
+.btn.btn-secondary:active {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
