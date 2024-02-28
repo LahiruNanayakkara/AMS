@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Asset } from '../../../Models/asset';
 import { AssetsService } from '../../../Services/assets.service';
 
@@ -12,17 +12,26 @@ export class AssetListComponent {
   assetList?:Asset[];
   totalLength:any;
   page:number=1;
+  assetServices: AssetsService = inject(AssetsService);
 
-  constructor( private service:AssetsService) {
+  constructor( private assetsService:AssetsService) {
+    this.assetList = assetsService.assetList;
   }
 
-  ngOnInit() {
-    this.assetList = this.getAssets(this.service);
-    console.log(this.assetList);
-  }
+  // getAssets(){
+  //   this.assetServices.getAssets().then((assets:Asset[]) => {
+  //     this.assetList = assets;
+  //     // this.pagingConfig.totalItems = assets.length;
+  //   })
+  // }
 
-  getAssets(service:AssetsService): Asset[] {
-    return service.assetList
-  }
+  // ngOnInit() {
+  //   this.assetList = this.getAssets(this.service);
+  //   console.log(this.assetList);
+  // }
+
+  // getAssets(service:AssetsService): Asset[] {
+  //   return service.assetList
+  // }
 
 }

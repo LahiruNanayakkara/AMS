@@ -29,6 +29,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { AssetListComponent } from './Employee/Asset-List/asset-list/asset-list.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MyAssetsTableComponent } from './Tables/my-assets-table/my-assets-table.component';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -61,13 +62,17 @@ import { MyAssetsTableComponent } from './Tables/my-assets-table/my-assets-table
     FontAwesomeModule,
     OverlayModule,
     CdkMenuModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    HttpClientModule
   ],
   providers: [
+    provideHttpClient(withFetch()),
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+
+ }

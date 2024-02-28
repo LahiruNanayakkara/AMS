@@ -7,6 +7,11 @@ $text-white: white;
 $primary:#1366D9;
 $secondary:#5D6679;
 $font-secondary:#4F5B67;
+$success: #5FBC62;
+$failed: #FF1E34;
+$success-bg: #5FBC6230;
+$failed-bg: #FF1E3430;
+
 
 // for buttons
 .action-btns {
@@ -42,3 +47,21 @@ $font-secondary:#4F5B67;
   color: white;
 }
 
+.status {
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  border-radius: 0.313em;
+  min-width: 100px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+.status-operational {
+  background-color: $success-bg;
+  color: $success;
+}
+
+.status-not-operational {
+  background-color: $failed-bg;
+  color: $failed;
+}
